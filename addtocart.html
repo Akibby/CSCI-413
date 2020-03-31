@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="main-menu">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="navbar-item active">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="shop.html" class="nav-link">Shop</a>
+                            </li>
+                            <li id="login" class="navbar-item">
+                                <a href="login.html" class="nav-link">Login</a>
+                            </li>
+                            <li id="logout" style="display: none;" class="navbar-item">
+                                <a onclick="logout();" href="/index.html" class="nav-link">Logout</a>
+                            </li>
+                        </ul>
+                        <div class="cart my-2 my-lg-0">
+                            <span>
+                                <a href="addtocart.html"class="fa fa-shopping-cart" aria-hidden="true"></a></span>
+                            <span class="quntity"></span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="related-books">
+        <div class="container">
+            <h2>Items added to the cart</h2>
+            <div class="recomended-sec">
+              <div class="row">
+                  <div class="col-lg-2 col-md-3 col-sm-4">
+                      <div class="item">
+                          <img src="images/r1.jpg" alt="img">
+                          <h3><a href="#">Java How to Program</a></h3>
+                          <h6><span class="price">$191</span> / <a href="#">Remove item</a></h6>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input placeholder="Coupon Code" required>
+                        <button class="btn black">Apply Coupon</button>
+                        <table>
+                            <tr>
+                                <th>Sub-total</th>
+                                <th>$191</th>
+                            </tr>
+                            <tr>
+                                <th>Total</th>
+                                <th>$191</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
