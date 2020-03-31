@@ -13,8 +13,6 @@ $(() => {
     showLogout();
     hideLogin();
   }
-  $('#searchForm').submit((event) => {
-  });
 });
 
 function getHostURL() {
