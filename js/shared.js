@@ -12,7 +12,9 @@ $(() => {
   if(isLoggedIn()) {
     showLogout();
     hideLogin();
-  } 
+  }
+  $('#searchForm').submit((event) => {
+  });
 });
 
 function getHostURL() {
@@ -38,7 +40,7 @@ function getUserFromForm() {
 function showErrorMessage(message) {
   const $errorMessage = $('#errorMessage');
   $errorMessage.text(message);
-  $errorMessage.show();
+  $errorMessage.show().delay(5000).fadeOut();
 }
 
 function setIdRedirect(result) {
