@@ -1,3 +1,10 @@
+$.ajaxSetup({
+  crossDomain: true,
+  xhrFields: {
+    withCredentials: true
+  }
+});
+
 $(() => {
   $('#searchForm').submit((event) => {
     event.preventDefault();
@@ -13,7 +20,7 @@ $(() => {
                                         <div class="item">
                                           <img src="${items[i].volumeInfo.imageLinks.thumbnail}" alt="img">
                                           <h3>${items[i].volumeInfo.title}</h3>
-                                          <h6><span class="price">$204</span> / <a href="/product-single.html?id=${items[i].id}">Buy Now</a></h6>
+                                          <h6><a href="/product-single.html?id=${items[i].id}">Buy Now</a></h6>
                                         </div>
                                       </div>`)
           }

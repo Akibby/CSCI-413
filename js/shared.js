@@ -1,10 +1,3 @@
-$.ajaxSetup({
-  crossDomain: true,
-  xhrFields: {
-    withCredentials: true
-  }
-});
-
 const API_URL = getHostURL();
 const AUTH_URL = `${API_URL}/auth`;
 const CART_URL = `${API_URL}/user`;
@@ -33,6 +26,7 @@ function getUserFromForm() {
     email,
     password
   };
+
   return user
 }
 
@@ -40,6 +34,12 @@ function showErrorMessage(message) {
   const $errorMessage = $('#errorMessage');
   $errorMessage.text(message);
   $errorMessage.show().delay(5000).fadeOut();
+}
+
+function showSuccessMessage(message) {
+  const $successMessage = $('#successMessage');
+  $successMessage.text(message);
+  $successMessage.show().delay(5000).fadeOut();
 }
 
 function setIdRedirect(result) {

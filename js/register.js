@@ -1,5 +1,12 @@
 redirectIfLoggedIn();
 
+$.ajaxSetup({
+  crossDomain: true,
+  xhrFields: {
+    withCredentials: true
+  }
+});
+
 $(() => {
   $('#registerForm').submit((event) => {
     event.preventDefault();
