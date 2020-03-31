@@ -34,14 +34,17 @@
                             <li class="navbar-item">
                                 <a href="shop.html" class="nav-link">Shop</a>
                             </li>
-                            <li class="navbar-item">
+                            <li id="login" class="navbar-item">
                                 <a href="login.html" class="nav-link">Login</a>
+                            </li>
+                            <li id="logout" style="display: none;" class="navbar-item">
+                                <a onclick="logout();" href="/index.html" class="nav-link">Logout</a>
                             </li>
                         </ul>
                         <div id="userCart" class="cart my-2 my-lg-0">
                             <span>
                                 <a href="addtocart.html"class="fa fa-shopping-cart" aria-hidden="true"></a></span>
-                            <span class="quntity"></span>
+                            <span id="quantity" class="quntity"></span>
                         </div>
                     </div>
                 </nav>

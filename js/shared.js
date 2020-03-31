@@ -3,14 +3,42 @@ const AUTH_URL = `${API_URL}/auth`;
 const CART_URL = `${API_URL}/user`;
 const searchURL = 'https://www.googleapis.com/books/v1/volumes';
 
+// $.ajaxSetup({
+//   crossDomain: true,
+//   xhrFields: {
+//     withCredentials: true
+//   }
+// });
+
 $(() => {
   if(isLoggedIn()) {
     showLogout();
     hideLogin();
+    updateCart();
   } else {
     hideCart();
   }
 });
+
+function updateCart(){
+  $.ajax({
+    type: 'GET',
+    url: `${CART_URL}/${localStorage.user_id}/cart`,
+    crossDomain: true,
+    xhrFields: {
+      withCredentials: true
+    }
+  }).then(result => {
+    console.log(result);
+    if(result.length > 0){
+      $('#quantity').text(result.length);
+    }else{
+      $('#quantity').hide();
+    }
+  }).catch(error => {
+    showErrorMessage(error.responseJSON.message);
+  });
+}
 
 function getHostURL() {
   if (window.location.host.indexOf('localhost') != -1) {

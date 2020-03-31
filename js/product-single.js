@@ -48,10 +48,11 @@ $(() => {
                   console.log(newItem);
                   addToCart(newItem)
                     .then(result => {
+                      updateCart();
                       showSuccessMessage('Item added to cart');
                     }).catch(error => {
                       showErrorMessage(error.responseJSON.message);
-                    })
+                    });
                 } else {
                   showErrorMessage('You must be logged in to do that');
                 }
