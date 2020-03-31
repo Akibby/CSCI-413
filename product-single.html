@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <script src="./js/shared.js"></script>
+    <script src="./js/product-single.js"></script>
 </head>
 
 <body>
@@ -51,8 +54,9 @@
         </div>
     </div>
     <section class="product-sec">
+        <div class="alert alert-danger col-md-5" role="alert" id="errorMessage" style="display:none"></div>
         <div class="container">
-            <h1>Software Engineering</h1>
+            <h1 id="title"></h1>
             <div class="row">
                 <div class="col-md-6 slider-sec">
                     <!-- main slider carousel -->
@@ -60,17 +64,17 @@
                         <!-- main slider carousel items -->
                         <div class="carousel-inner">
                             <div class="active item carousel-item" data-slide-number="0">
-                                <img src="images/product1.jpg" class="img-fluid">
+                                <img id="bookImage" src="" class="img-fluid">
                             </div>
-                            <div class="item carousel-item" data-slide-number="1">
+                            <!-- <div class="item carousel-item" data-slide-number="1">
                                 <img src="images/product2.jpg" class="img-fluid">
                             </div>
                             <div class="item carousel-item" data-slide-number="2">
                                 <img src="images/product3.jpg" class="img-fluid">
-                            </div>
+                            </div> -->
                         </div>
                         <!-- main slider carousel nav controls -->
-                        <ul class="carousel-indicators list-inline">
+                        <!-- <ul class="carousel-indicators list-inline">
                             <li class="list-inline-item active">
                                 <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#myCarousel">
                                 <img src="images/product1.jpg" class="img-fluid">
@@ -86,12 +90,12 @@
                                 <img src="images/product3.jpg" class="img-fluid">
                             </a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                     <!--/main slider carousel-->
                 </div>
                 <div class="col-md-6 slider-content">
-                    <p>Need to write something here , give me some ideas</p>
+                    <p id="description"></p>
                     <ul>
                         <li>
                             <span class="name">Price</span><span class="clm">:</span>
@@ -99,8 +103,7 @@
                         </li>
                     </ul>
                     <div class="btn-sec">
-                        <button class="btn ">Add To cart</button>
-                        <button class="btn black">Buy Now</button>
+                        <button id="addCart" class="btn ">Add To cart</button>
                     </div>
                 </div>
             </div>

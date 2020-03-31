@@ -7,9 +7,14 @@ $(() => {
 
     login(user)
       .then(result => {
-        localStorage.user_id = result.id;
-        window.location = '/index.html'
-        console.log(result);
+        if (result.id) {
+          localStorage.user_id = result.id;
+          console.log(result);
+          window.location = '/index.html'
+        } else {
+          showErrorMessage('Bad Response From Server')
+        }
+
       }).catch(error => {
         console.error(error);
         showErrorMessage(error.responseJSON.message);

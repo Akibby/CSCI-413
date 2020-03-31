@@ -7,6 +7,8 @@ $.ajaxSetup({
 
 const API_URL = getHostURL();
 const AUTH_URL = `${API_URL}/auth`;
+const CART_URL = `${API_URL}/user`;
+const searchURL = 'https://www.googleapis.com/books/v1/volumes';
 
 $(() => {
   if(isLoggedIn()) {
@@ -31,7 +33,6 @@ function getUserFromForm() {
     email,
     password
   };
-  
   return user
 }
 
