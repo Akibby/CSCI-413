@@ -7,6 +7,8 @@ $(() => {
   if(isLoggedIn()) {
     showLogout();
     hideLogin();
+  } else {
+    hideCart();
   }
 });
 
@@ -62,9 +64,14 @@ function hideLogin() {
   $('#login').hide();
 }
 
+function hideCart() {
+  $('#userCart').hide();
+}
 function isLoggedIn() {
   if(localStorage.user_id) {
     return true;
+  }else{
+    return false;
   }
 }
 
