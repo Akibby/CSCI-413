@@ -59,23 +59,24 @@
     <section class="static about-sec">
         <div class="container">
             <h1>My Account / REgister</h1>
-            <div class="form">
+            <div id="registerForm" class="form">
                 <form>
                     <div class="row">
+                        <div class="alert alert-danger col-md-5" role="alert" id="errorMessage" style="display:none"></div>
                         <div class="col-md-4">
-                            <input placeholder="Enter User Name" required>
+                            <input id="email" type="email" placeholder="Enter Email" required>
                             <span class="required-star">*</span>
                         </div>
                         <div class="col-md-4">
-                            <input type="email" placeholder="Password" required>
+                            <input id="password" type="password" placeholder="Password" required>
                             <span class="required-star">*</span>
                         </div>
                         <div class="col-md-4">
-                            <input type="email" placeholder="Repeat Password" required>
+                            <input id="passwordCopy" type="password" placeholder="Repeat Password" required>
                             <span class="required-star">*</span>
                         </div>
                         <div class="col-lg-8 col-md-12">
-                            <button class="btn black">Register</button>
+                            <button type="submit" class="btn black">Register</button>
                             <h5>Already Registered? <a href="login.html">Login here</a></h5>
                         </div>
                     </div>

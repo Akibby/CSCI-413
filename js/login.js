@@ -9,6 +9,7 @@ $(() => {
       .then(result => {
         localStorage.user_id = result.id;
         window.location = '/index.html'
+        console.log(result);
       }).catch(error => {
         console.error(error);
         showErrorMessage(error.responseJSON.message);
