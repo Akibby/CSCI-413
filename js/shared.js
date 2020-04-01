@@ -36,7 +36,7 @@ function updateCart(){
       $('#quantity').hide();
     }
   }).catch(error => {
-    showErrorMessage(error.responseJSON.message);
+    console.log(error.responseJSON.message);
   });
 }
 
