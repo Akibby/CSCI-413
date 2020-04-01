@@ -6,11 +6,11 @@ $(() => {
     xhrFields: {
       withCredentials: true
     }
+  });
   $('#loginForm').submit((event) => {
     event.preventDefault();
     const user = getUserFromForm();
     console.log(user);
-    });
     login(user)
       .then(result => {
         if (result.id) {
