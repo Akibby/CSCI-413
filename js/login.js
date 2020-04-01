@@ -1,12 +1,5 @@
 redirectIfLoggedIn();
 
-$.ajaxSetup({
-  crossDomain: true,
-  xhrFields: {
-    withCredentials: true
-  }
-});
-
 $(() => {
   $('#loginForm').submit((event) => {
     event.preventDefault();
@@ -30,5 +23,11 @@ $(() => {
 });
 
 function login(user) {
+  $.ajaxSetup({
+    crossDomain: true,
+    xhrFields: {
+      withCredentials: true
+    }
+  });
   return $.post(`${AUTH_URL}/login`, user)
 }
