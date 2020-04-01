@@ -9,7 +9,7 @@ $(() => {
       const image_url = result.image;
       const title = result.title;
       const quantity = parseFloat(result.price).toFixed(2);
-      const product_id = id;
+      const product_id = result.id;
       const description = result.description;
       $('#title').html(title);
       $('#bookImage').attr('src', image_url);
