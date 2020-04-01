@@ -1,8 +1,7 @@
 const API_URL = getHostURL();
 const AUTH_URL = `${API_URL}/auth`;
 const CART_URL = `${API_URL}/user`;
-const searchURL = 'https://www.googleapis.com/books/v1/volumes';
-
+const scrapeMultiURL = `${API_URL}/search`;
 // $.ajaxSetup({
 //   crossDomain: true,
 //   xhrFields: {
@@ -29,7 +28,6 @@ function updateCart(){
       withCredentials: true
     }
   }).then(result => {
-    console.log(result);
     if(result.length > 0){
       $('#quantity').text(result.length);
     }else{
