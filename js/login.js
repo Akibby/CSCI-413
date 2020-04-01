@@ -5,6 +5,12 @@ $(() => {
     event.preventDefault();
     const user = getUserFromForm();
     console.log(user);
+    $.ajaxSetup({
+      crossDomain: true,
+      xhrFields: {
+        withCredentials: true
+      }
+    });
     login(user)
       .then(result => {
         if (result.id) {
@@ -23,11 +29,5 @@ $(() => {
 });
 
 function login(user) {
-  $.ajaxSetup({
-    crossDomain: true,
-    xhrFields: {
-      withCredentials: true
-    }
-  });
   return $.post(`${AUTH_URL}/login`, user)
 }
