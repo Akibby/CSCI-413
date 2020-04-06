@@ -15,7 +15,7 @@ $(() => {
       $('#bookImage').attr('src', image_url);
       $('#description').html(description);
       if (result.available) {
-        $('#price').text(quantity);
+        $('#price').text(`$${quantity}`);
       } else {
         $('#price').text('Price not found');
         $('#addCart').prop('disabled', true);
