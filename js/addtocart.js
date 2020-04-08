@@ -7,6 +7,10 @@ $.ajaxSetup({
 
 $(() => {
   if (isLoggedIn()) {
+    $('#checkoutBtn').click(function (event) {
+      event.preventDefault();
+      window.location = 'checkout.html';
+    });
     getCart(localStorage.user_id)
       .then(result => {
         let priceTotal = 0;

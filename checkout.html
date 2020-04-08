@@ -9,7 +9,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="Style.css">
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+<script src="./js/shared.js"></script>
+<script src="./js/checkout.js"></script>
 <style>
     body {
   font-family: Arial;
@@ -133,7 +135,7 @@ span.price {
 
     <div class="container">
 
-      <form action="/action_page.php">
+      <form>
 
       
 
@@ -207,10 +209,11 @@ span.price {
   <div class="col-25">
     <div class="container">
       <h4>Cart <span class="price" style="color:black">
-      <i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-      <p><a href="#">CALCULUS</a> <span class="price">$150</span></p>
+      <i class="fa fa-shopping-cart"></i> <b id="cartQuantity"></b></span></h4>
+      <div id="cartItems">
+      </div>
       <hr>
-      <p>Total <span class="price" style="color:black"><b>$150</b></span></p>
+      <p>Total <span id="totalPrice" class="price" style="color:black"><b>$150</b></span></p>
     </div>
   </div>
 </div>
