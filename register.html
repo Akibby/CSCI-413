@@ -59,11 +59,13 @@
     <section class="static about-sec">
         <div class="container">
             <h1>My Account / REgister</h1>
+            <div class="row justify-content-center">
+                <div class="text-center alert alert-danger col-md-auto" role="alert" id="errorMessage" style="display:none"></div>
+                <div class="text-center alert alert-success col-md-auto" role="alert" id="successMessage" style="display:none"></div>
+            </div>
             <div id="registerForm" class="form">
                 <form>
                     <div class="row">
-                        <div class="alert alert-danger col-md-5" role="alert" id="errorMessage" style="display:none"></div>
-                        <div class="alert alert-success col-md-5" role="alert" id="successMessage" style="display:none"></div>
                         <div class="col-md-4">
                             <input id="email" type="email" placeholder="Enter Email" required>
                             <span class="required-star">*</span>
