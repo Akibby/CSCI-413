@@ -34,7 +34,7 @@ $(() => {
   getRecentlyAdded()
     .then(result => {
       console.log(result);
-      const recentlyAdded = result.slice(Math.max(result.length - 10, 2));
+      const recentlyAdded = result.slice(4, 9);
       for (let i = 0; i < recentlyAdded.length; i++) {
         $('#recent-books').append(
           `<div class="col-md-3">
