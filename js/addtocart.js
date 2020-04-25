@@ -13,6 +13,7 @@ $(() => {
     });
     getCart(localStorage.user_id)
       .then(result => {
+        console.log(result);
         let priceTotal = 0;
         for (let i = 0; i < result.length; i++) {
           $('#cartResults').append(`
