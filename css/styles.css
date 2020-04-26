@@ -3,6 +3,10 @@
 /* color */
 /* Font size */
 /* mixin */
+.removeText {
+  white-space: nowrap;
+}
+
 body {
   margin: 0px;
   padding: 0px;

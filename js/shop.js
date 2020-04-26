@@ -40,8 +40,8 @@ $(() => {
           `<div class="col-md-3">
             <div class="item">
               <img src="${recentlyAdded[i].image_url}" alt="img">
-              <h8><a href="#">${recentlyAdded[i].title}</a></h8>
-              <h3><a href="#">ISBN: ${recentlyAdded[i].isbn}</a></h3>
+              <h8><a href="/product-single.html?id=${recentlyAdded[i].isbn}">${recentlyAdded[i].title}</a></h8>
+              <h3><a href="/product-single.html?id=${recentlyAdded[i].isbn}">ISBN: ${recentlyAdded[i].isbn}</a></h3>
               <h6><span class="price">$${recentlyAdded[i].price}</span> / <a href="/product-single.html?id=${recentlyAdded[i].isbn}">Buy Now</a></h6>
             </div>
           </div>`);

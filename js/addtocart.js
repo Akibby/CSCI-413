@@ -20,8 +20,8 @@ $(() => {
             <div id="itemdiv-${result[i].product_id}" class="col-lg-2 col-md-3 col-sm-4">
               <div class="item">
                 <img src="${result[i].image_url}" alt="img">
-                <h3><a href="/product-single.html?id=${result[i].product_id}">${result[i].title}</a></>
-                <h6><span class="price">$${result[i].quantity}</span> / <a class="removebtn" id="${result[i].product_id}" price="${result[i].quantity}">Remove item</a></h6>
+                <h3><a href="/product-single.html?id=${result[i].product_id}">${result[i].title}</a></h3>
+                <h6 class="removeText"><span class="price">$${result[i].quantity}</span> / <a class="removebtn" id="${result[i].product_id}" price="${result[i].quantity}">Remove item</a></h6>
               </div>
             </div>`);
           priceTotal += parseFloat(result[i].quantity);
